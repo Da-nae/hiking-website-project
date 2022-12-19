@@ -1,7 +1,6 @@
 <?php
 declare(strict_types=1);
 
-
 class HikeController
 {
     private Hikes $hikeTwo;
@@ -13,7 +12,7 @@ class HikeController
 
     public function index(): void
     {
-        $hike = $this->productModel->findAll();
+        $hike = $this->hikeTwo->findAll();
 
         include 'views/includes/header.view.php';
         include 'views/index.view.php';
