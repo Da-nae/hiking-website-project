@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 class HikeController
 {
-    private Hike $hikeTwo;
+    private Hikes $hikeTwo;
 
     public function __construct()
     {
-        $this->hikeTwo = new Hike();
+        $this->hikeTwo = new Hikes();
     }
 
     public function index(): void
