@@ -7,7 +7,6 @@
     <link href="/style/output.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/assets/favicon.ico" rel="icon">
-    <script src="https://cdn.tailwindcss.com"></script>
     <title>My hiking path</title>
 </head>
 
@@ -16,7 +15,7 @@
         <nav>
             <ul>
                 <a href="/"><li>Home</li></a>
-                <?php if($_SESSION['user']['loggedIn']){ ?>
+                <?php if(!empty($_SESSION['user']['loggedIn'])){ ?>
                     <a href="/logout"><li>Logout</li></a>
                     <?php } else { ?>
                     <a href="/login"><li>Login</li></a>
@@ -26,7 +25,7 @@
         </nav>
         <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
             <div class="container flex flex-wrap items-center justify-between mx-auto">
-                <a href=" class="flex items-center">
+                <a href=" " class="flex items-center">
                     <img src="assets/hiking.png" class="h-6 mr-3 sm:h-9" alt="website logo" />
                     <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">My hiking path</span>
                 </a>

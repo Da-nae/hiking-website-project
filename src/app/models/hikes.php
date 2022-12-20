@@ -6,7 +6,7 @@ class Hikes extends Database
     {
         try {
             return $this->query(
-                'SELECT distance, hike_name, duration FROM hikes LIMIT 20'
+                'SELECT distance, hike_name, duration FROM hikes'
             )->fetchAll();
 
         } catch (Exception $e) {

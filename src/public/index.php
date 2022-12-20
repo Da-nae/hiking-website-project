@@ -1,17 +1,24 @@
 <?php
 declare(strict_types=1);
-// require_once("app/views/layout/header.view.php");
-require "vendor/autoload.php";
 
 session_start();
+
+var_dump(getenv('DB_DATABASE'));
+var_dump(getenv('DB_HOST'));
+var_dump(getenv('DB_USER'));
+var_dump(getenv('DB_PASSWORD'));
+
+
+require_once "app/views/include/header.view.php";
+require "vendor/autoload.php";
 
 // Fetch the url after the slash bar : 
 $url = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 $method = $_SERVER['REQUEST_METHOD'];
 
 if ($url === '/' || $url === '') {
-    $HomeController = new HomeController();
-    $HomeController->index();
+    $HikeController = new HikeController();
+    $HikeController->index();
 }
 
 if($url === 'registration'){
