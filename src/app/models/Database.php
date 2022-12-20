@@ -13,8 +13,8 @@ abstract class Database
             getenv('DB_PASSWORD')
         );
 
-        // var_dump($this->pdo);
-        // die();
+        var_dump($this->pdo);
+        die();
 
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
