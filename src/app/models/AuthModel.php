@@ -4,13 +4,15 @@ declare(strict_types=1);
 
 class AuthModel extends Database 
 {
-    public function create(string $username, string $email, string $password)
+    public function create(string $nickname, string $firstname, string $lastname, string $email, string $password)
     {
 
         if (!$this->query(
-            "INSERT INTO users(username, email, password) VALUES (?, ?, ?)",
+            "INSERT INTO users(nickname, firstname, lastname, email, password) VALUES (?, ?, ?, ?, ?)",
             [
-                $username,
+                $nickname,
+                $firstname,
+                $lastname,
                 $email,
                 $password
             ]
@@ -19,19 +21,19 @@ class AuthModel extends Database
         }
     }
 
-    public function find(string $username): array
+    public function find(string $nickname): array
     {
         $user = $this->query(
-            "SELECT * FROM users WHERE username = ?",
+            "SELECT * FROM users WHERE nickname = ?",
             [
-                $username
+                $nickname
             ]
         )->fetch();
 
         if(!$user) {
             throw new Exception('Failed login attempt');
         }
-        
+
         return $user;
     }
 }

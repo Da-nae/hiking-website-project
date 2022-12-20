@@ -6,8 +6,8 @@ class HomeController
 {
     public function index(): void
     {
-        // include 'views/include/header.view.php';
-        // include 'views/index.view.php';
-        // include 'views/include/footer.view.php';
+        include 'app/views/include/header.view.php';
+        include 'app/views/index.view.php';
+        include 'app/views/include/footer.view.php';
     }
 }

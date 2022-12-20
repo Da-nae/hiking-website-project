@@ -10,9 +10,14 @@ require "vendor/autoload.php";
 $url = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 $method = $_SERVER['REQUEST_METHOD'];
 
-if ($url === '/' || $url === '') {
-    $HomeController = new HomeController();
-    $HomeController->index();
+if ($url === '') {
+    $HikeController = new HikeController();
+    $HikeController->index();
+}
+
+if ($url === 'index') {
+    $HikeController = new HikeController();
+    $HikeController->index();
 }
 
 if($url === 'registration'){
