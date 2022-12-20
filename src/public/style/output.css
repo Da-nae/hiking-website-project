@@ -666,14 +666,24 @@ video {
   white-space: nowrap;
 }
 
+<<<<<<< HEAD
 .rounded {
   border-radius: 0.25rem;
 }
 
+=======
+>>>>>>> bbab5de9de7e605b4471613b6430b33b4fcaa9fb
 .rounded-full {
   border-radius: 9999px;
 }
 
+<<<<<<< HEAD
+=======
+.rounded {
+  border-radius: 0.25rem;
+}
+
+>>>>>>> bbab5de9de7e605b4471613b6430b33b4fcaa9fb
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -801,11 +811,14 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+<<<<<<< HEAD
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
+=======
+>>>>>>> bbab5de9de7e605b4471613b6430b33b4fcaa9fb
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);

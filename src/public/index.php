@@ -3,20 +3,19 @@ declare(strict_types=1);
 
 session_start();
 
-var_dump(getenv('DB_DATABASE'));
-var_dump(getenv('DB_HOST'));
-var_dump(getenv('DB_USER'));
-var_dump(getenv('DB_PASSWORD'));
-
-
-require_once "app/views/include/header.view.php";
+require_once("app/views/include/header.view.php");
 require "vendor/autoload.php";
 
 // Fetch the url after the slash bar : 
 $url = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 $method = $_SERVER['REQUEST_METHOD'];
 
-if ($url === '/' || $url === '') {
+if ($url === '') {
+    $HikeController = new HikeController();
+    $HikeController->index();
+}
+
+if ($url === 'index') {
     $HikeController = new HikeController();
     $HikeController->index();
 }
@@ -52,20 +51,8 @@ if ($url === 'login') {
     }
 }
 
-// if ($url === 'registration') {
-//     $authController = new AuthController();
-
-//     if ($method === 'GET') {
-//         $authController->showRegistrationForm();
-//     }
-
-//     if ($method === 'POST') {
-//         $authController->register($_POST);
-//     }
-// }
-
-// if ($url === 'product') {
+// if ($url === 'hike') {
 //     $code = $_GET['code'];
-//     $productController = new ProductController();
-//     $productController->show($code);
+//     $hikeController = new hikeController();
+//     $hikeController->show($code);
 // }
