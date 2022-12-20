@@ -7,6 +7,8 @@ namespace Composer\Autoload;
 class ComposerStaticInitb75cd59d2ccf355fc15d9d4ccb3ea637
 {
     public static $classMap = array (
+        'AuthController' => __DIR__ . '/../..' . '/app/controllers/AuthController.php',
+        'AuthModel' => __DIR__ . '/../..' . '/app/models/AuthModel.php',
         'ComposerAutoloaderInitb75cd59d2ccf355fc15d9d4ccb3ea637' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInitb75cd59d2ccf355fc15d9d4ccb3ea637' => __DIR__ . '/..' . '/composer/autoload_static.php',
@@ -14,6 +16,7 @@ class ComposerStaticInitb75cd59d2ccf355fc15d9d4ccb3ea637
         'Database' => __DIR__ . '/../..' . '/app/models/Database.php',
         'HikeController' => __DIR__ . '/../..' . '/app/controllers/HikeController.php',
         'Hikes' => __DIR__ . '/../..' . '/app/models/hikes.php',
+        'HomeController' => __DIR__ . '/../..' . '/app/controllers/homeController.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

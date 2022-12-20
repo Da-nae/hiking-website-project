@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-require_once("app/views/layout/header.view.php");
+// require_once("app/views/layout/header.view.php");
 require "vendor/autoload.php";
 
 session_start();
@@ -33,17 +33,17 @@ if ($url === 'logout') {
     $authController->logout();
 }
 
-// if ($url === 'login') {
-//     $authController = new AuthController();
+if ($url === 'login') {
+    $authController = new AuthController();
 
-//     if ($method === 'GET') {
-//         $authController->showLoginForm();
-//     }
+    if ($method === 'GET') {
+        $authController->showLoginForm();
+    }
 
-//     if ($method === 'POST') {
-//         $authController->login($_POST);
-//     }
-// }
+    if ($method === 'POST') {
+        $authController->login($_POST);
+    }
+}
 
 // if ($url === 'registration') {
 //     $authController = new AuthController();
