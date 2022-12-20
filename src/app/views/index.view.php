@@ -1,3 +1,6 @@
+<?php
+require("HikeController.php");
+?>
 <ul>
     <?php foreach ($hikes as $hike) : ?>
         <li>

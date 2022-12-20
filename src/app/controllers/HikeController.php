@@ -3,16 +3,16 @@ declare(strict_types=1);
 
 class HikeController
 {
-    private Hikes $hikeTwo;
+    private Hikes $hikeModel;
 
     public function __construct()
     {
-        $this->hikeTwo = new Hikes();
+        $this->hikeModel = new Hikes();
     }
 
     public function index(): void
     {
-        $hike = $this->hikeTwo->findAll();
+        $hikes = $this->hikeModel->findAll();
 
         include 'views/includes/header.view.php';
         include 'views/index.view.php';
@@ -25,7 +25,7 @@ class HikeController
             throw new Exception("Hike ID was not provided.");
         }
 
-        $hike = $this->hikeTwo->find($code);
+        $hikes = $this->hikeModel->find($code);
 
         include 'views/includes/header.view.php';
         include 'views/hike.view.php';
