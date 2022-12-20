@@ -27,8 +27,8 @@ class HikeController
 
         $hikes = $this->hikeModel->find($code);
 
-        include 'views/includes/header.view.php';
+        // include 'views/includes/header.view.php';
         include 'views/hike.view.php';
-        include 'views/includes/footer.view.php';
+        // include 'views/includes/footer.view.php';
     }
 }

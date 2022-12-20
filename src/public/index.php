@@ -1,9 +1,10 @@
 <?php
 declare(strict_types=1);
-require_once("app/views/include/header.view.php");
-require "vendor/autoload.php";
 
 session_start();
+
+require_once("app/views/include/header.view.php");
+require "vendor/autoload.php";
 
 // Fetch the url after the slash bar : 
 $url = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
