@@ -45,8 +45,8 @@ if ($url === 'login') {
     }
 }
 
-// if ($url === 'product') {
+// if ($url === 'hike') {
 //     $code = $_GET['code'];
-//     $productController = new ProductController();
-//     $productController->show($code);
+//     $hikeController = new hikeController();
+//     $hikeController->show($code);
 // }
