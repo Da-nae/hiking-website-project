@@ -2,3 +2,5 @@
 ./dbdata/
 /dbdata/
 .env
+src/vendor
+src/node_modules
