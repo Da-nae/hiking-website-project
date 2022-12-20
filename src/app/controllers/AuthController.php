@@ -38,6 +38,13 @@ class AuthController
 
     }
 
+    public function logout(): void
+    {
+        unset($_SESSION['user']);
+
+        header('location: /');
+    }
+
     public function showRegistrationForm(): void
     {
         include 'views/include/footer.view.php';
