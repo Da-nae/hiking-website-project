@@ -10,13 +10,13 @@
     <title>My hiking path</title>
 </head>
 
-<body>
+<body class="bg-Laurel-green h-screen">
     <header>
-        <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
+        <nav class="border-gray-200 px-2 sm:px-4 py-2.5 bg-Rich-black ">
             <div class="container flex flex-wrap items-center justify-between mx-auto">
             <a href="/" class="flex items-center">
                     <img src="assets/hiking.png" class="h-6 mr-3 sm:h-9" alt="website logo" />
-                    <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">My hiking path</span>
+                    <span class="self-center text-xl font-semibold whitespace-nowrap text-white">My hiking path</span>
                 </a>
                 <div class="flex items-center md:order-2">
                     <button type="button" class="flex mr-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom" id="user-dropdown">
