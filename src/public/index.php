@@ -17,6 +17,7 @@ if ($url === '') {
 }
 
 if ($url === 'index') {
+    include 'app/views/include/header.view.php';
     $HikeController = new HikeController();
     $HikeController->index();
 }
