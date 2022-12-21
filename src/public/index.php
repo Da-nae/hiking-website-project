@@ -64,3 +64,9 @@ if ($url === 'tag') {
     $hikeController = new HikeController();
     $hikeController->showByTag($idTag);
 }
+
+if ($url === 'user') {
+    $userID = $_GET['code'];
+    $userController = new UserController();
+    $userController->showUser($userID);
+}

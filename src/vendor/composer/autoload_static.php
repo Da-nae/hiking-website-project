@@ -19,6 +19,8 @@ class ComposerStaticInitb75cd59d2ccf355fc15d9d4ccb3ea637
         'HomeController' => __DIR__ . '/../..' . '/app/controllers/homeController.php',
         'TagController' => __DIR__ . '/../..' . '/app/controllers/TagController.php',
         'Tags' => __DIR__ . '/../..' . '/app/models/tags.php',
+        'UserController' => __DIR__ . '/../..' . '/app/controllers/UserController.php',
+        'Users' => __DIR__ . '/../..' . '/app/models/users.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

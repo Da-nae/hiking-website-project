@@ -36,4 +36,20 @@ class AuthModel extends Database
 
         return $user;
     }
+
+    public function showUser(string $userID): array|false
+    {
+        try {
+            return $this->query(
+                'SELECT * FROM users WHERE ID_users = ?',
+                [
+                    $userID
+                ]
+            )->fetch();
+
+        } catch (Exception $e) {
+            echo $e->getMessage();
+            return [];
+        }
+    }
 }
