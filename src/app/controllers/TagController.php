@@ -10,8 +10,10 @@ class TagController
         $this->tagModel = new Tags();
     }
 
-    public function indexTag(): void
+    public function indexTag()
     {
-        $tag = $this->tagModel->findAllTag();
+        $tags = $this->tagModel->findAllTag();
+
+        include 'app/views/tag.view.php';    
     }
 }
