@@ -13,7 +13,7 @@
 
 <body class="h-screen">
     <header>
-        <nav class="border-gray-200 px-2 sm:px-4 py-2.5 bg-Rich-black ">
+        <nav class="border-gray-200 px-4 sm:px-4 py-2.5 bg-Rich-black ">
             <div class="container flex flex-wrap items-center justify-between mx-auto">
             <a href="/" class="flex items-center">
                     <img src="assets/hiking.png" class="h-6 mr-3 sm:h-9" alt="website logo" />
