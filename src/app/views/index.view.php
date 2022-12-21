@@ -1,7 +1,7 @@
 <ul>
     <?php foreach ($hikes as $hike) : ?>
         <li>
-            <a href="/hikes.php?code=<?= $hike['ID_hikes']; ?>">
+            <a href="/hike?code=<?= $hike['ID_hikes']; ?>">
                 <span><?= $hike['hike_name'] ?></span>
             </a>
         </li>

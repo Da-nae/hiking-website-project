@@ -53,6 +53,6 @@ if ($url === 'login') {
 
 if ($url === 'hike') {
     $code = $_GET['code'];
-    $hikeController = new hikeController();
+    $hikeController = new HikeController();
     $hikeController->show($code);
 }
