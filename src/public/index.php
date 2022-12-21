@@ -51,8 +51,8 @@ if ($url === 'login') {
     }
 }
 
-// if ($url === 'hike') {
-//     $code = $_GET['code'];
-//     $hikeController = new hikeController();
-//     $hikeController->show($code);
-// }
+if ($url === 'hike') {
+    $code = $_GET['code'];
+    $hikeController = new hikeController();
+    $hikeController->show($code);
+}

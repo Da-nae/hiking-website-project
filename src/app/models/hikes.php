@@ -19,7 +19,7 @@ class Hikes extends Database
     {
         try {
             return $this->query(
-                "SELECT hike_name, date, distance, duration, elevation_gain, description FROM hikes WHERE ID_hikes = ?",
+                'SELECT hike_name, date, distance, duration, elevation_gain, description FROM hikes WHERE ID_hikes = ?',
                 [
                     $code
                 ]
