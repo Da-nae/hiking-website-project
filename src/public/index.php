@@ -12,6 +12,8 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 if ($url === '') {
     $HikeController = new HikeController();
+    $TagController = new TagController();
+    $TagController->indexTag();
     $HikeController->index();
 }
 
@@ -53,6 +55,6 @@ if ($url === 'login') {
 
 if ($url === 'hike') {
     $code = $_GET['code'];
-    $hikeController = new hikeController();
+    $hikeController = new HikeController();
     $hikeController->show($code);
 }

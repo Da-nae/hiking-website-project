@@ -14,9 +14,8 @@ class HikeController
     {
         $hikes = $this->hikeModel->findAll();
 
-        include 'app/views/includes/header.view.php';
         include 'app/views/index.view.php';
-        include 'app/views/includes/footer.view.php';
+        include 'app/views/include/footer.view.php';
     }
 
     public function show(string $code): void
@@ -25,10 +24,9 @@ class HikeController
             throw new Exception("Hike ID was not provided.");
         }
 
-        $hikes = $this->hikeModel->find($code);
+        $hike = $this->hikeModel->find($code);
 
-        include 'app/views/includes/header.view.php';
         include 'app/views/hike.view.php';
-        include 'app/views/includes/footer.view.php';
+        include 'app/views/include/footer.view.php';
     }
 }
