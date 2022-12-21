@@ -6,7 +6,7 @@ class Hikes extends Database
     {
         try {
             return $this->query(
-                'SELECT * FROM hikes LIMIT 20'
+                'SELECT distance, hike_name, duration FROM hikes'
             )->fetchAll();
 
         } catch (Exception $e) {
@@ -19,7 +19,7 @@ class Hikes extends Database
     {
         try {
             return $this->query(
-                'SELECT hike_name, date, distance, duration, elevation_gain description FROM hikes WHERE ID_hikes = ?',
+                'SELECT * FROM hikes WHERE ID_hikes = ?',
                 [
                     $code
                 ]
