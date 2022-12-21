@@ -36,7 +36,7 @@ class HikeController
             throw new Exception("Tag ID was not provided.");
         }
 
-        $tags = $this->hikeModel->findByTag($idTag);
+        $HikesByTag = $this->hikeModel->findByTag($idTag);
 
         include 'app/views/hikeByTag.view.php';
         include 'app/views/include/footer.view.php';

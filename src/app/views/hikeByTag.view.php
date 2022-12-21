@@ -1,7 +1,7 @@
 <ul>
-    <?php foreach ($tags as $tag) : ?>
+    <?php foreach ($HikesByTag as $hike) : ?>
         <li>
-                <span><?= $tag['hike_name'] ?></span>
+                <span><?= $hike['hike_name'] ?></span>
         </li>
     <?php endforeach; ?>
 </ul>
