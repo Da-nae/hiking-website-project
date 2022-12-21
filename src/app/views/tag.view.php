@@ -2,7 +2,7 @@
     <ul>
     <?php foreach ($tags as $tag) : ?>
         <li>
-            <span><?= $tag['tag_name'] ?></span>
+            <a href="/tag?code=<?= $tag['ID_tags']?>"><?= $tag['tag_name'] ?></a>
         </li>
     <?php endforeach; ?>
     </ul>
