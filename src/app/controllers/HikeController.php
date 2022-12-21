@@ -26,6 +26,7 @@ class HikeController
 
         $hike = $this->hikeModel->find($code);
 
+        include 'app/views/include/header.view.php';
         include 'app/views/hike.view.php';
         include 'app/views/include/footer.view.php';
     }
@@ -38,6 +39,7 @@ class HikeController
 
         $HikesByTag = $this->hikeModel->findByTag($idTag);
 
+        include 'app/views/include/header.view.php';
         include 'app/views/hikeByTag.view.php';
         include 'app/views/include/footer.view.php';
     }

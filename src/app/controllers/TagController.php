@@ -14,6 +14,8 @@ class TagController
     {
         $tags = $this->tagModel->findAllTag();
 
+        include 'app/views/include/header.view.php';
         include 'app/views/tag.view.php';
+        include 'app/views/include/footer.view.php';
     }
 }

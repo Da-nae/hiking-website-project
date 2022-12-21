@@ -27,15 +27,14 @@ class AuthController
         
         // What is storred in the cookie of the user : 
         $_SESSION['user'] = [
-            'id' => $user['id'],
+            'id' => $user['ID_users'],
             'username' => $user['nickname'],
-            'email' => $user['email'],
-            'loggedIn'=> true
+            'email' => $user['email']
         ];
 
         // Then, we redirect to the home page :
         http_response_code(302);
-        header('location: /');
+        header('Location: /');
     }
 
     public function register(array $input): void
@@ -65,7 +64,7 @@ class AuthController
 
         // Then, we redirect to the home page :
         http_response_code(302);
-        header('location: /');
+        header('Location: /');
 
     }
 
@@ -73,16 +72,21 @@ class AuthController
     {
         unset($_SESSION['user']);
 
-        header('location: /');
+        http_response_code(302);
+        header('Location: /');
     }
 
     public function showRegistrationForm(): void
     {
+        include 'app/views/include/header.view.php';
         include 'app/views/registrationForm.view.php';
+        include 'app/views/include/footer.view.php';
     }
 
     public function showLoginForm(): void
     {
+        include 'app/views/include/header.view.php';
         include 'app/views/loginForm.view.php';
+        include 'app/views/include/footer.view.php';
     }
 }

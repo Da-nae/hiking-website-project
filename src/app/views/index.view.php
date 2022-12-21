@@ -6,7 +6,7 @@
                 <p class="ml-10"><?= $hike['distance'] ?>km</p>
                 <p class="mr-10"><?= $hike['duration'] ?></p>
             </div>
-            <a class=" px-8 py-2  rounded-lg border-2 text-Tomato border-Tomato hover:bg-Tomato hover:text-white transition-all" href="/hikes.php?code=<?= $hike['ID_hikes']; ?>">See more</a>
+            <a class=" px-8 py-2  rounded-lg border-2 text-Tomato border-Tomato hover:bg-Tomato hover:text-white transition-all" href="/hike?code=<?= $hike['ID_hikes']; ?>">See more</a>
         </li>
     <?php endforeach; ?>
 </ul>

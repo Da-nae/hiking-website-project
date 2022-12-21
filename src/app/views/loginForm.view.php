@@ -1,7 +1,7 @@
-<form action="/registration" method="post">
+<form action="/login" method="post">
     <div>
         <label for="username">Username :</label>
-        <input type="text" name="username" id="username">
+        <input type="text" name="nickname" id="nickname">
     </div>
     <div>
         <label for="password">Password :</label>

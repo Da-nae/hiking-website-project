@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 session_start();
 
-require_once("app/views/include/header.view.php");
 require "vendor/autoload.php";
 
 // Fetch the url after the slash bar : 
