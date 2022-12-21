@@ -7,10 +7,11 @@
     <link href="/style/output.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/assets/favicon.ico" rel="icon">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <title>My hiking path</title>
 </head>
 
-<body class="bg-Laurel-green h-screen">
+<body class="h-screen">
     <header>
         <nav class="border-gray-200 px-2 sm:px-4 py-2.5 bg-Rich-black ">
             <div class="container flex flex-wrap items-center justify-between mx-auto">
