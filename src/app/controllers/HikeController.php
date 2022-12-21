@@ -29,4 +29,16 @@ class HikeController
         include 'app/views/hike.view.php';
         include 'app/views/include/footer.view.php';
     }
+
+    public function showByTag(string $idTag): void
+    {
+        if (empty($idTag)) {
+            throw new Exception("Tag ID was not provided.");
+        }
+
+        $HikesByTag = $this->hikeModel->findByTag($idTag);
+
+        include 'app/views/hikeByTag.view.php';
+        include 'app/views/include/footer.view.php';
+    }
 }

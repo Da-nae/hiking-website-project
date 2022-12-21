@@ -58,3 +58,9 @@ if ($url === 'hike') {
     $hikeController = new HikeController();
     $hikeController->show($code);
 }
+
+if ($url === 'tag') {
+    $idTag = $_GET['code'];
+    $hikeController = new HikeController();
+    $hikeController->showByTag($idTag);
+}
