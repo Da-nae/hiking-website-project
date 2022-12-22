@@ -16,4 +16,10 @@
             <a class=" px-8 py-2  rounded-lg border-2 text-Tomato border-Tomato hover:bg-Tomato hover:text-white transition-all" href="/hike?code=<?= $hike['ID_hikes']; ?>">See more</a>
         </li>
     <?php endforeach; ?>
+    <?php if(!empty($_SESSION['user'])): ?>
+    <li class="border-2 border-Old-mauve shadow-lg py-5 rounded-lg my-2 cursor-pointer">
+        <a href="/create"><p class="text-6xl w-full h-full flex justify-center items-center">+</p></a>
+        
+    </li>
+    <?php endif; ?>
 </ul>

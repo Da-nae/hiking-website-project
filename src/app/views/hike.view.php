@@ -20,7 +20,10 @@
             </p>
         </div>
         <p><?= $hike['description'] ?></p>
+        <button class="bg-Laurel-green hover:opacity-80 h-12 rounded-xl text-white mt-10">Edit</button>
+        <button class="bg-Tomato h-12 hover:opacity-80 rounded-xl text-white mt-5">Delete</button>
         <ul class="flex mt-10 flex-wrap items-center justify-center">
+    
             <?php foreach ($TagsOfHike as $tag) : ?>
                 <li class="mx-5 bg-Laurel-green text-white px-2 py-1 my-1 rounded-lg cursor-pointer">
                     <a href="/tag?code=<?= $tag['ID_tags'] ?>"><?= $tag['tag_name'] ?></a>

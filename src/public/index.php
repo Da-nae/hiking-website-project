@@ -54,7 +54,9 @@ if ($url === 'login') {
 }
 
 if ($url === 'hike') {
-    $code = $_GET['code'];
+    $code = $_GET['code'];include 'app/views/include/header.view.php';
+    include 'app/views/hikeByTag.view.php';
+    include 'app/views/include/footer.view.php';
     $hikeController = new HikeController();
     $hikeController->show($code);
 }
@@ -66,7 +68,19 @@ if ($url === 'tag') {
 }
 
 if ($url === 'user') {
-    $userID = $_GET['code'];
+    // $userID = $_GET['code'];
     $userController = new UserController();
-    $userController->showUser($userID);
+    $userController->showUser();
+}
+
+if($url === 'create') {
+
+    $createHike = new HikeController();
+
+    if($method === 'GET') {
+        $createHike->showCreate();
+    }
+    if ($method === 'POST') {
+        $createHike->create($_POST);  
+    }
 }
