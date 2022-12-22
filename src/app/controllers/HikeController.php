@@ -26,6 +26,7 @@ class HikeController
 
         $hike = $this->hikeModel->find($code);
         $TagsOfHike = $this->hikeModel->findTag($code);
+        $hikeAuthor = $this->hikeModel->findAuthor($code);
 
         include 'app/views/include/header.view.php';
         include 'app/views/hike.view.php';

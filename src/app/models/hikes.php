@@ -47,6 +47,22 @@ class Hikes extends Database
         }
     }
 
+    public function findAuthor(string $code): array|false
+    {
+        try {
+            return $this->query(
+                'SELECT us.firstname, us.lastname FROM hikes hi JOIN users us ON us.ID_users = hi.ID_users WHERE hi.ID_hikes = ?',
+                [
+                    $code
+                ]
+            )->fetch();
+
+        } catch (Exception $e) {
+            echo $e->getMessage();
+            return [];
+        }
+    }
+
     public function findByTag(string $idTag): array|false
     {
         try {

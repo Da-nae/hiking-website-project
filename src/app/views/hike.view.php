@@ -1,5 +1,6 @@
 <article class="border-2 border-Old-mauve shadow-lg flex flex-col items-center justify-center text-center py-5 px-5 rounded-lg my-10 max-w-[600px] w-[90%] mx-auto">
-    <h1 class="mb-10 text-2xl text-center px-1"><?= $hike['hike_name'] ?></h1>
+    <h1 class="mb-2 text-2xl text-center px-1"><?= $hike['hike_name'] ?></h1>
+    <h4 class="mb-10 text-l text-center text-Tomato">By <?= $hikeAuthor['firstname'] ?> <?= $hikeAuthor['lastname'] ?></h4>
     <div class="w-full flex flex-col justify-between mb-7">
         <div class="flex justify-between pb-7 px-10">
             <p class="bg-gray-100 text-gray-800 text-sm font-medium inline-flex items-center px-2.5 py-0.5 rounded mr-2 dark:bg-Rich-black dark:text-gray-300">
@@ -21,7 +22,7 @@
         <p><?= $hike['description'] ?></p>
         <ul class="flex mt-10 flex-wrap items-center justify-center">
             <?php foreach ($TagsOfHike as $tag) : ?>
-                <li class="mx-5 bg-Laurel-green text-white px-5 py-2 my-1 rounded-xl cursor-pointer">
+                <li class="mx-5 bg-Laurel-green text-white px-2 py-1 my-1 rounded-lg cursor-pointer">
                     <a href="/tag?code=<?= $tag['ID_tags'] ?>"><?= $tag['tag_name'] ?></a>
                 </li>
             <?php endforeach; ?>
