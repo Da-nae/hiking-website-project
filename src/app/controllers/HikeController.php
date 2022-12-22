@@ -53,7 +53,7 @@ class HikeController
         include 'app/views/include/footer.view.php';
     }
 
-    public function create(array $input) : void
+    public function create(array $input) 
     {
 
         if(empty($input['name']) || empty($input['distance']) || empty($input['duration']) || empty($input['elevation']) || empty($input['description'])){
@@ -64,11 +64,12 @@ class HikeController
         $date = date("Y-n-j");
         $distance = htmlspecialchars($input['distance']);
         $duration = htmlspecialchars($input['duration']);
-        $elevation = htmlspecialchars($înput['elevation']);
+        $elevation = htmlspecialchars($input['elevation']);
         $description = htmlspecialchars($input['description']);
         $update = date("Y-n-j");
+        $userID = $_SESSION['user']['id'];
 
-        $this->hikeModel->create($name, $distance, $duration, $elevation, $description);
+        $this->hikeModel->create($name, $date, $distance, $duration, $elevation, $description, $update, $userID);
 
         http_response_code(302);
         header('Location: /');

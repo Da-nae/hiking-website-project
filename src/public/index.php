@@ -54,7 +54,7 @@ if ($url === 'login') {
 }
 
 if ($url === 'hike') {
-    $code = $_GET['code'];include 'app/views/include/header.view.php';
+    $code = $_GET['code'];
     include 'app/views/hikeByTag.view.php';
     include 'app/views/include/footer.view.php';
     $hikeController = new HikeController();
