@@ -31,6 +31,22 @@ class Hikes extends Database
         }
     }
 
+    public function findTag(string $code): array|false
+    {
+        try {
+            return $this->query(
+                'SELECT tag.ID_tags FROM tagsList tag JOIN Hikes_Tags ht ON ht.ID_Tags = tag.ID_tags JOIN hikes hi ON hi.ID_hikes = ht.ID_hikes WHERE hi.ID_hikes = ?',
+                [
+                    $code
+                ]
+            )->fetchAll();
+
+        } catch (Exception $e) {
+            echo $e->getMessage();
+            return [];
+        }
+    }
+
     public function findByTag(string $idTag): array|false
     {
         try {
