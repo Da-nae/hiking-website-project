@@ -35,7 +35,7 @@ class Hikes extends Database
     {
         try {
             return $this->query(
-                'SELECT tag.ID_tags FROM tagsList tag JOIN Hikes_Tags ht ON ht.ID_Tags = tag.ID_tags JOIN hikes hi ON hi.ID_hikes = ht.ID_hikes WHERE hi.ID_hikes = ?',
+                'SELECT tag.tag_name FROM tagsList tag JOIN Hikes_Tags ht ON ht.ID_Tags = tag.ID_tags JOIN hikes hi ON hi.ID_hikes = ht.ID_hikes WHERE hi.ID_hikes = ?',
                 [
                     $code
                 ]

@@ -25,7 +25,7 @@ class HikeController
         }
 
         $hike = $this->hikeModel->find($code);
-        $this->hikeModel->findTag($code);
+        $TagsOfHike = $this->hikeModel->findTag($code);
 
         include 'app/views/include/header.view.php';
         include 'app/views/hike.view.php';
@@ -43,14 +43,5 @@ class HikeController
         include 'app/views/include/header.view.php';
         include 'app/views/hikeByTag.view.php';
         include 'app/views/include/footer.view.php';
-    }
-
-    public function showAllTag(string $code): void
-    {
-        if (empty($code)) {
-            throw new Exception("Tag ID was not provided.");
-        }
-
-        $TagsOfHike = $this->hikeModel->findTag($code);
     }
 }
