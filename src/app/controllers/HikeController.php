@@ -43,4 +43,32 @@ class HikeController
         include 'app/views/hikeByTag.view.php';
         include 'app/views/include/footer.view.php';
     }
+
+    public function showCreate() {  
+        
+        include 'app/views/include/header.view.php';
+        include 'app/views/createHike.view.php';
+        include 'app/views/include/footer.view.php';
+    }
+
+    public function create(array $input) : void
+    {
+
+        if(empty($input['name']) || empty($input['distance']) || empty($input['duration']) || empty($input['elevation']) || empty($input['description'])){
+            throw new Exception('Form data not validated.');
+        }
+
+        $name = htmlspecialchars($input['name']);
+        $date = date("Y-n-j");
+        $distance = htmlspecialchars($input['distance']);
+        $duration = htmlspecialchars($input['duration']);
+        $elevation = htmlspecialchars($înput['elevation']);
+        $description = htmlspecialchars($input['description']);
+        $update = date("Y-n-j");
+
+        $this->hikeModel->create($name, $distance, $duration, $elevation, $description);
+
+        http_response_code(302);
+        header('Location: /');
+    }
 }

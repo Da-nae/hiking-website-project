@@ -7,9 +7,11 @@
             <?= $hike['distance'] ?>km</p>
             <p class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded mr-2 dark:bg-Rich-black dark:text-gray-300"><svg aria-hidden="true" class="mr-1 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg><?= $hike['duration'] ?></p>
             <p class="bg-gray-100 text-gray-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded mr-2 dark:bg-Rich-black dark:text-gray-300">  
-            <svg class="mr-1 w-3 h-3 fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+            <svg class="mr-1 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
             <?= $hike['elevation_gain'] ?>m</p>
         </div>
         <p><?= $hike['description'] ?></p>
+        <button class="bg-Laurel-green hover:opacity-80 h-12 rounded-xl text-white mt-10">Edit</button>
+        <button class="bg-Tomato h-12 hover:opacity-80 rounded-xl text-white mt-5">Delete</button>
     </div>
 </article>

@@ -46,4 +46,20 @@ class Hikes extends Database
             return [];
         }
     }
+
+    public function create($name, $date, $distance, $duration, $elevation, $description) {
+        if(!$this->query(
+            'INSERT INTO hikes VALUES (?, ?, ?, ?, ?, ?)', 
+            [
+                $name,
+                $date,
+                $distance,
+                $duration,
+                $elevation,
+                $description
+            ]
+        )) {
+            throw new Exception('Error during hike creation.');
+        } 
+    }
 }
