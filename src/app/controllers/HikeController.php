@@ -77,10 +77,9 @@ class HikeController
 
     public function showMyHikes($userID)
     {
+        $hikeByUser = $this->hikeModel->findByUser($userID);
         include 'app/views/include/header.view.php';
         include 'app/views/myHikes.view.php';
         include 'app/views/include/footer.view.php';
-        var_dump($userID);
-        $hikeByUser -> $this->hikeModel->findByUser($userID);
     }
 }
