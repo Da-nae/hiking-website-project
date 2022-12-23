@@ -1,4 +1,4 @@
-# **Titre**
+# **Hiking project**
 
 Description rapide et lien du projet.
 
