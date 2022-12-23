@@ -12,7 +12,7 @@
             </div>
             <div class="flex flex-col w-[80%]">
                 <label for="duration">Duration :</label>
-                <input class="my-2 p-1 rounded mb-8 border-2" type="number" name="duration" id="duration">
+                <input class="my-2 p-1 rounded mb-8 border-2" type="time" name="duration" id="duration" step="2">
             </div>
             <div class="flex flex-col w-[80%]">
                 <label for="elevation">Elevation :</label>
