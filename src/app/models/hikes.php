@@ -81,7 +81,7 @@ class Hikes extends Database
 
     public function create($name, $date, $distance, $duration, $elevation, $description, $update, $userID) {
         if(!$this->query(
-            'INSERT INTO hikes VALUES (?, ?, ?, ?, ?, ?, ?, ?)', 
+            'INSERT INTO hikes(hike_name, date, distance, duration, elevation_gain, description, update_at, ID_users) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', 
             [
                 $name,
                 $date,

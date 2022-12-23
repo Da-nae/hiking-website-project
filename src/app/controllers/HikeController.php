@@ -67,7 +67,7 @@ class HikeController
         $elevation = htmlspecialchars($input['elevation']);
         $description = htmlspecialchars($input['description']);
         $update = date("Y-n-j");
-        $userID = $_SESSION['user']['id'];
+        $userID = $_SESSION['user']['id'] ?? '';
 
         $this->hikeModel->create($name, $date, $distance, $duration, $elevation, $description, $update, $userID);
 
