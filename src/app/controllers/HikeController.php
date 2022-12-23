@@ -36,7 +36,7 @@ class HikeController
     public function showByTag(string $idTag): void
     {
         if (empty($idTag)) {
-            throw new Exception("Tag ID was not provided.");
+            throw new Exception("Tag ID not provided.");
         }
 
         $HikesByTag = $this->hikeModel->findByTag($idTag);
@@ -70,6 +70,41 @@ class HikeController
         $userID = $_SESSION['user']['id'] ?? '';
 
         $this->hikeModel->create($name, $date, $distance, $duration, $elevation, $description, $update, $userID);
+
+        http_response_code(302);
+        header('Location: /');
+    }
+
+    public function delete($IDhike) {
+        $this->hikeModel->delete($IDhike);
+
+        http_response_code(302);
+        header('Location: /');
+    }
+
+    public function showEdit($hikeID) {
+
+        $hike = $this->hikeModel->find($hikeID);
+
+        include 'app/views/include/header.view.php';
+        include 'app/views/edit.view.php';
+        include 'app/views/include/footer.view.php';
+    }
+
+    public function edit($input) {
+
+        if(empty($input['name']) || empty($input['distance']) || empty($input['duration']) || empty($input['elevation']) || empty($input['description'])){
+            throw new Exception('Form data not validated.');
+        }
+
+        $name = htmlspecialchars($input['name']);
+        $distance = htmlspecialchars($input['distance']);
+        $duration = htmlspecialchars($input['duration']);
+        $elevation = htmlspecialchars($input['elevation']);
+        $description = htmlspecialchars($input['description']);
+        $update = date("Y-n-j");
+
+        $this->hikeModel->edit($name, $distance, $duration, $elevation, $description, $update);
 
         http_response_code(302);
         header('Location: /');

@@ -84,3 +84,22 @@ if($url === 'create') {
         $createHike->create($_POST);  
     }
 }
+
+if($url === 'delete') {
+    $IDhike = $_GET['code'];
+    $deleteHike = new HikeController();
+    $deleteHike->delete($IDhike);
+}
+
+if($url === 'edit') {
+
+    $hikeID = $_GET['code'];
+    $editHike = new HikeController();
+
+    if($method === 'GET') {
+        $editHike->showEdit($hikeID);
+    }
+    if($method === 'POST') {
+        $editHike->edit($_POST);
+    }
+}
