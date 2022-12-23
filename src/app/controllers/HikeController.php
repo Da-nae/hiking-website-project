@@ -74,4 +74,13 @@ class HikeController
         http_response_code(302);
         header('Location: /');
     }
+
+    public function showMyHikes($userID)
+    {
+        include 'app/views/include/header.view.php';
+        include 'app/views/myHikes.view.php';
+        include 'app/views/include/footer.view.php';
+        var_dump($userID);
+        $hikeByUser -> $this->hikeModel->findByUser($userID);
+    }
 }

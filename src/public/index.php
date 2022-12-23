@@ -84,3 +84,9 @@ if($url === 'create') {
         $createHike->create($_POST);  
     }
 }
+
+if ($url === 'myhikes') {
+    $userID = $_SESSION['user']['id'];;
+    $myHikes = new HikeController();
+    $myHikes->showMyHikes($userID);
+}

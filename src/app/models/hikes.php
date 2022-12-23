@@ -96,4 +96,19 @@ class Hikes extends Database
             throw new Exception('Error during hike creation.');
         } 
     }
+
+    public function findByUser($userID)
+    {
+        try {
+            return $this->query(
+            'SELECT * FROM hikes WHERE ID_users = ?',
+            [
+                $userID
+            ]
+            )->fetchAll();
+        } catch (Exception $e) {
+            echo $e->getMessage();
+            return [];
+        }
+    }
 }
