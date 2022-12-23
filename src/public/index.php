@@ -90,3 +90,21 @@ if ($url === 'myhikes') {
     $myHikes = new HikeController();
     $myHikes->showMyHikes($userID);
 }
+if($url === 'delete') {
+    $IDhike = $_GET['code'];
+    $deleteHike = new HikeController();
+    $deleteHike->delete($IDhike);
+}
+
+if($url === 'edit') {
+
+    $hikeID = $_GET['code'];
+    $editHike = new HikeController();
+
+    if($method === 'GET') {
+        $editHike->showEdit($hikeID);
+    }
+    if($method === 'POST') {
+        $editHike->edit($_POST);
+    }
+}

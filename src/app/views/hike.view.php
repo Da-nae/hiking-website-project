@@ -20,8 +20,10 @@
             </p>
         </div>
         <p><?= $hike['description'] ?></p>
-        <button class="bg-Laurel-green hover:opacity-80 h-12 rounded-xl text-white mt-10">Edit</button>
-        <button class="bg-Tomato h-12 hover:opacity-80 rounded-xl text-white mt-5">Delete</button>
+        <?php if(!empty($_SESSION['user']) && $hike['ID_users'] === $_SESSION['user']['id']): ?>
+        <a value="<?php $idhike = $_GET['code'] ?>" class="bg-Laurel-green hover:opacity-80 h-12 flex justify-center items-center rounded-xl text-white mt-10" href="/edit?code=<?= $idhike ?>">Edit</a>
+        <a value="<?php $idhike = $_GET['code'] ?>" class="bg-Tomato h-12 hover:opacity-80 rounded-xl flex items-center justify-center text-white mt-5" href="/delete?code=<?= $idhike ?>" onclick="confirm('Do you really want to delete this hike ?')">Delete</a>
+        <?php endif; ?>
         <ul class="flex mt-10 flex-wrap items-center justify-center">
     
             <?php foreach ($TagsOfHike as $tag) : ?>

@@ -111,4 +111,31 @@ class Hikes extends Database
             return [];
         }
     }
+    public function delete($hikeID) {
+        if(!$this->query(
+            'DELETE FROM hikes WHERE ID_hikes = ?',
+            [
+                $hikeID
+            ]
+        )) {
+            throw new Exception('Error during delete');
+        }
+    }
+
+    public function edit($name, $distance, $duration, $elevation, $description, $update) {
+        if(!$this->query(
+            'UPDATE hikes SET hike_name = ?, distance = ?, duration = ?, elevation_gain = ?, description = ?, update_at = ? WHERE hike_name = ?',
+            [
+                $name,
+                $distance,
+                $duration,
+                $elevation,
+                $description,
+                $update,
+                $name
+            ]
+        )) {
+            throw new Exception('Error during hike creation.');
+        } 
+    }
 }
